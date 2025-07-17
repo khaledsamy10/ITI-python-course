@@ -64,8 +64,8 @@ class Office:
     def deduct(self,id,deduction):   #deduction passed in positive number, if deduction is 100 then salary=salary-100
         try:
             for em_object in self.employees:
-                if em_object.id==id:
-                    em_object.salary= em_object.salary-deduction
+                if em_object.id==int(id):
+                    em_object.salary= em_object.salary-float(deduction)
                     break
                 else:
                     continue
@@ -78,8 +78,8 @@ class Office:
     def reward(self,id,reward):
         try:
             for em_object in self.employees:
-                if em_object.id==id:
-                    em_object.salary= em_object.salary+reward   # reward passed in positive number, if reward is 100 then salary=salary+100
+                if em_object.id==int(id):
+                    em_object.salary= em_object.salary+float(reward)   # reward passed in positive number, if reward is 100 then salary=salary+100
                     break
                 else:
                     continue
